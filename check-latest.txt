@@ -1,0 +1,3 @@
+Required files: 72; present: 72; missing: 0
+
+This is a static preflight only; it does not replace TypeScript, build, accessibility or browser testing.

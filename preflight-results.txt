@@ -1,0 +1,140 @@
+Required files: 72; present: 41; missing: 31
+
+Missing files:
+ - package.json
+ - next.config.mjs
+ - tailwind.config.ts
+ - postcss.config.mjs
+ - tsconfig.json
+ - .env.example
+ - vercel.json
+ - scripts/obfuscate.mjs
+ - styles/globals.css
+ - lib/schemas.ts
+ - lib/seo.ts
+ - lib/jsonld.ts
+ - lib/env.ts
+ - lib/rate-limit.ts
+ - components/layout/Navbar.tsx
+ - components/layout/Footer.tsx
+ - components/layout/MobileMenu.tsx
+ - components/layout/SkipLink.tsx
+ - components/seo/JsonLd.tsx
+ - components/ui/Button.tsx
+ - components/ui/Card.tsx
+ - components/ui/Container.tsx
+ - components/ui/Section.tsx
+ - components/ui/Input.tsx
+ - components/ui/Accordion.tsx
+ - components/ui/Badge.tsx
+ - data/services.ts
+ - data/products.ts
+ - data/reviews.ts
+ - data/beforeAfter.ts
+ - data/faqs.ts
+
+Potential unresolved @/ imports:
+ - app/layout.tsx: @/components/layout/Navbar
+ - app/layout.tsx: @/components/layout/Footer
+ - app/layout.tsx: @/components/layout/SkipLink
+ - app/layout.tsx: @/components/seo/JsonLd
+ - app/layout.tsx: @/lib/jsonld
+ - app/layout.tsx: @/lib/seo
+ - app/page.tsx: @/lib/seo
+ - components/sections/Hero.tsx: @/components/ui/Button
+ - components/sections/Hero.tsx: @/components/ui/Container
+ - components/sections/Hero.tsx: @/lib/seo
+ - components/sections/TrustStrip.tsx: @/components/ui/Container
+ - components/sections/ServicePreview.tsx: @/components/ui/Section
+ - components/sections/ServicePreview.tsx: @/components/ui/Card
+ - components/sections/ServicePreview.tsx: @/components/ui/Button
+ - components/sections/ServicePreview.tsx: @/data/services
+ - components/sections/WhyChooseUs.tsx: @/components/ui/Button
+ - components/sections/WhyChooseUs.tsx: @/components/ui/Container
+ - components/sections/BeforeAfterTeaser.tsx: @/components/ui/Button
+ - components/sections/BeforeAfterTeaser.tsx: @/components/ui/Section
+ - components/sections/BeforeAfterTeaser.tsx: @/data/beforeAfter
+ - components/sections/TestimonialTeaser.tsx: @/components/ui/Button
+ - components/sections/TestimonialTeaser.tsx: @/components/ui/Section
+ - components/sections/TestimonialTeaser.tsx: @/data/reviews
+ - components/sections/InteriorTeaser.tsx: @/components/ui/Button
+ - components/sections/InteriorTeaser.tsx: @/components/ui/Container
+ - components/sections/ProductTeaser.tsx: @/components/ui/Button
+ - components/sections/ProductTeaser.tsx: @/components/ui/Section
+ - components/sections/ProductTeaser.tsx: @/data/products
+ - components/sections/BlogTeaser.tsx: @/components/ui/Section
+ - components/sections/BlogTeaser.tsx: @/components/ui/Card
+ - components/sections/BlogTeaser.tsx: @/components/ui/Button
+ - components/sections/FinalCTA.tsx: @/components/ui/Button
+ - components/sections/FinalCTA.tsx: @/components/ui/Container
+ - app/services/page.tsx: @/components/ui/Container
+ - app/services/page.tsx: @/components/ui/Accordion
+ - app/services/page.tsx: @/components/seo/JsonLd
+ - app/services/page.tsx: @/data/services
+ - app/services/page.tsx: @/data/faqs
+ - app/services/page.tsx: @/lib/seo
+ - app/services/page.tsx: @/lib/jsonld
+ - app/services/[slug]/page.tsx: @/components/ui/Container
+ - app/services/[slug]/page.tsx: @/components/ui/Accordion
+ - app/services/[slug]/page.tsx: @/components/seo/JsonLd
+ - app/services/[slug]/page.tsx: @/data/services
+ - app/services/[slug]/page.tsx: @/lib/seo
+ - app/services/[slug]/page.tsx: @/lib/jsonld
+ - app/shop/page.tsx: @/components/ui/Container
+ - app/shop/page.tsx: @/components/ui/Accordion
+ - app/shop/page.tsx: @/components/seo/JsonLd
+ - app/shop/page.tsx: @/data/products
+ - app/shop/page.tsx: @/data/faqs
+ - app/shop/page.tsx: @/lib/seo
+ - app/shop/page.tsx: @/lib/jsonld
+ - components/shop/ProductCard.tsx: @/data/products
+ - components/shop/ProductCard.tsx: @/data/products
+ - components/shop/ProductFilter.tsx: @/data/products
+ - app/before-after/page.tsx: @/components/ui/Container
+ - app/before-after/page.tsx: @/components/ui/Button
+ - app/before-after/page.tsx: @/data/beforeAfter
+ - app/before-after/page.tsx: @/lib/seo
+ - app/testimonials/page.tsx: @/components/ui/Button
+ - app/testimonials/page.tsx: @/components/ui/Container
+ - app/testimonials/page.tsx: @/data/reviews
+ - app/testimonials/page.tsx: @/lib/seo
+ - app/about/page.tsx: @/components/ui/Button
+ - app/about/page.tsx: @/components/ui/Container
+ - app/about/page.tsx: @/lib/seo
+ - app/booking/page.tsx: @/components/ui/Container
+ - app/booking/page.tsx: @/components/ui/Accordion
+ - app/booking/page.tsx: @/components/seo/JsonLd
+ - app/booking/page.tsx: @/data/faqs
+ - app/booking/page.tsx: @/lib/jsonld
+ - app/booking/page.tsx: @/lib/seo
+ - app/contact/page.tsx: @/components/ui/Container
+ - app/contact/page.tsx: @/components/ui/Accordion
+ - app/contact/page.tsx: @/components/seo/JsonLd
+ - app/contact/page.tsx: @/data/faqs
+ - app/contact/page.tsx: @/lib/jsonld
+ - app/contact/page.tsx: @/lib/seo
+ - components/booking/BookingForm.tsx: @/lib/schemas
+ - components/booking/BookingForm.tsx: @/data/services
+ - components/contact/ContactForm.tsx: @/lib/schemas
+ - lib/form-processing.ts: @/lib/schemas
+ - lib/form-processing.ts: @/lib/rate-limit
+ - app/thank-you/page.tsx: @/components/ui/Container
+ - app/thank-you/page.tsx: @/lib/seo
+ - app/not-found.tsx: @/components/ui/Container
+ - app/blog/page.tsx: @/components/ui/Container
+ - app/blog/page.tsx: @/lib/seo
+ - app/blog/[slug]/page.tsx: @/components/ui/Container
+ - app/blog/[slug]/page.tsx: @/components/ui/Accordion
+ - app/blog/[slug]/page.tsx: @/components/seo/JsonLd
+ - app/blog/[slug]/page.tsx: @/lib/seo
+ - app/blog/[slug]/page.tsx: @/lib/jsonld
+ - app/sitemap.ts: @/data/services
+ - app/sitemap.ts: @/lib/seo
+ - app/robots.ts: @/lib/seo
+ - app/opengraph-image.tsx: @/lib/seo
+ - app/privacy/page.tsx: @/components/ui/Container
+ - app/privacy/page.tsx: @/lib/seo
+ - app/terms/page.tsx: @/components/ui/Container
+ - app/terms/page.tsx: @/lib/seo
+
+This is a static preflight only; it does not replace TypeScript, build, accessibility or browser testing.

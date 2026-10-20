@@ -1,0 +1,1 @@
+export type SalonReview={id:string;author:string;quote:string;source?:string;verified:boolean};export const reviews:SalonReview[]=[];export function getPublishedReviews(){return reviews.filter(x=>x.verified)}

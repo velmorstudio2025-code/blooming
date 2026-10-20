@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+export const siteConfig={name:process.env.NEXT_PUBLIC_BRAND_NAME||'Blooming',city:process.env.NEXT_PUBLIC_CITY||'Pondicherry',tagline:process.env.NEXT_PUBLIC_TAGLINE||'Beauty, without boundaries.',url:process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000',locale:'en_IN'};
+export function absoluteUrl(path='/'){return new URL(path,siteConfig.url.endsWith('/')?siteConfig.url:siteConfig.url+'/').toString()}
+type Opt={title:string;description:string;path?:string;image?:string;noIndex?:boolean;type?:'website'|'article';publishedTime?:string;modifiedTime?:string};
+export function createMetadata({title,description,path='/',image='/opengraph-image',noIndex=false,type='website',publishedTime,modifiedTime}:Opt):Metadata{return {title:`${title} | ${siteConfig.name}`,description,alternates:{canonical:absoluteUrl(path)},openGraph:{title,description,type,siteName:siteConfig.name,url:absoluteUrl(path),images:[{url:absoluteUrl(image),width:1200,height:630}],...(type==='article'?{publishedTime,modifiedTime}:{})},twitter:{card:'summary_large_image'},robots:noIndex?{index:false,follow:false}:undefined}}
+export function homeDescription(){return `Explore considered hair, beauty and grooming at ${siteConfig.name} in ${siteConfig.city}. Thoughtful care for everyone.`}
+export function serviceDescription(service:string){return `Explore ${service} at ${siteConfig.name} in ${siteConfig.city}. Enquire about appointments and pricing.`}

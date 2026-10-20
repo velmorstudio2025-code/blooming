@@ -1,0 +1,1 @@
+import type {ReactNode} from 'react';export default function Container({children,narrow=false,className=''}:{children:ReactNode;narrow?:boolean;className?:string}){return <div className={`site-container ${narrow?'max-w-[900px]':''} ${className}`}>{children}</div>}

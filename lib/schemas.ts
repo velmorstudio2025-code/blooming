@@ -1,0 +1,6 @@
+import {z} from 'zod';
+const name=z.string().trim().min(1).max(100); const email=z.email().max(254); const phone=z.string().trim().regex(/^\+?[0-9 ()-]{7,20}$/);
+export const contactSchema=z.object({name,email,phone:phone.optional().or(z.literal('')),subject:z.string().trim().min(1).max(150),message:z.string().trim().min(10).max(3000),consent:z.boolean().refine(Boolean),website:z.string().max(0).optional()});
+export const bookingSchema=z.object({name,email,phone,service:z.string().min(1),preferredDate:z.iso.date(),preferredTime:z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/),notes:z.string().max(1500).optional(),consent:z.boolean().refine(Boolean),website:z.string().max(0).optional()});
+export type ContactFormValues=z.infer<typeof contactSchema>;export type BookingFormValues=z.infer<typeof bookingSchema>;
+export function validateBookingDate(date:string,time:string,timeZone='Asia/Kolkata'){const parts=new Intl.DateTimeFormat('en-CA',{timeZone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const v=Object.fromEntries(parts.map(x=>[x.type,x.value]));return `${date}T${time}`>`${v.year}-${v.month}-${v.day}T${v.hour}:${v.minute}`;}

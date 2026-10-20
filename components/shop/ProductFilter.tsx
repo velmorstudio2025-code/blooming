@@ -11,7 +11,7 @@ export default function ProductFilter({products, whatsapp, categories}: Props) {
   const searchId = useId();
   const filtered = useMemo(() => products.filter((p) => {
     const matchesCategory = category === "All" || p.category === category;
-    const text = `${p.name} ${p.description} ${p.category} ${p.benefits.join(" ")}`.toLocaleLowerCase();
+    const text = `${p.name} ${p.description} ${p.category}`.toLocaleLowerCase();
     return matchesCategory && text.includes(query.trim().toLocaleLowerCase());
   }),[category,products,query]);
   return <>
